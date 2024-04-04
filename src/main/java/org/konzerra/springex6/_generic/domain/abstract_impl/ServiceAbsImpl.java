@@ -5,12 +5,12 @@ import org.konzerra.springex6._generic.domain.Mapper;
 import org.konzerra.springex6._generic.domain.Port;
 import org.konzerra.springex6._generic.domain.Service;
 
-public abstract class  ServiceImpl <Entity, Id, ResponseDto, SaveDto, UpdateDto>
+public abstract class ServiceAbsImpl<Entity, Id, ResponseDto, SaveDto, UpdateDto>
         implements Service<Entity, Id, ResponseDto, SaveDto, UpdateDto> {
 
     private final Port<Entity, Id> port;
     private final Mapper<Entity,ResponseDto, SaveDto, UpdateDto> mapper;
-    protected ServiceImpl(Port<Entity, Id> port, Mapper<Entity, ResponseDto, SaveDto, UpdateDto> mapper) {
+    protected ServiceAbsImpl(Port<Entity, Id> port, Mapper<Entity, ResponseDto, SaveDto, UpdateDto> mapper) {
         this.port = port;
         this.mapper = mapper;
     }

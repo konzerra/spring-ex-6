@@ -6,7 +6,7 @@ import lombok.*;
 
 @Getter
 @Setter
-@AllArgsConstructor
+@AllArgsConstructor(staticName = "constructor")
 @NoArgsConstructor
 @Builder
 @Entity
